@@ -3,7 +3,6 @@ pipeline {
   stages {
     stage('greeting') {
       steps {
-<<<<<<< HEAD
         sh '''echo "hello moon"
 '''
       }
@@ -18,10 +17,3 @@ docker-compose run web ./scripts/setup.sh rails test
     }
   }
 }
-=======
-        sh 'echo "Hello World"'
-      }
-    }
-  }
-}
->>>>>>> c7a4e3cd782a905087d748b06b850549e7048e46

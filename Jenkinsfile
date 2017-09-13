@@ -34,19 +34,18 @@ pipeline {
     stage('build image') {
       steps {
         sh '''
-          docker build -t ricmart/jukebox:$BUILD_NUMBER .
+          docker build -t chyld/jukebox:$BUILD_NUMBER .
 '''
       }
     }
     stage('login and push') {
       steps {
         sh '''
-          docker login -u ricmart -p $DOCKER_PASSWORD
-          docker push ricmart/jukebox:$BUILD_NUMBER
+          docker login -u chyld -p $DOCKER_PASSWORD
+          docker push chyld/jukebox:$BUILD_NUMBER
 '''
       }
     }
 
   }
 }
-
